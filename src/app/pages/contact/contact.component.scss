@@ -1,0 +1,72 @@
+*{
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        label {
+            margin-top: 20px;
+            margin-bottom: 7px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+        width: 440px; 
+        height: 4vh; 
+        padding: 8px; 
+        border: 0.5px solid #96AEB2; 
+        background-color: transparent; 
+        color: white;
+
+        font-family: "Josefin Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        }
+
+        textarea {
+            width: 440px;
+            height: 20vh; 
+            padding: 8px; 
+            border: 0.5px solid #96AEB2; 
+            background-color: transparent; 
+            color: white;
+
+            font-family: "Josefin Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 24px;
+            }
+        
+    }
+    button[type="submit"] {
+        margin-top: 14px;
+        padding: 15px 20px; 
+        width: 440px;
+        background-color: #96AEB2; 
+        color: black; 
+        border: none; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+        }
+        
+        button[type="submit"]:hover {
+        background-color: white; 
+        }
+
+}
+
+

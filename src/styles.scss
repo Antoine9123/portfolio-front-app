@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #151516;
+
+  background-image: url("assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+}
+
+::selection {
+  background: white;
+  color: #000;
+}
+
+::-moz-selection {
+  background: white; 
+  color: #000; 
+}

@@ -1,0 +1,39 @@
+.main {
+  background-color: rgba(21, 21, 22, 0.8);
+  width: 99vw;
+  height: 98vh;
+  border: 1px solid white;
+
+  color: black;
+  mix-blend-mode: exclusion;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 4vh;
+}
+
+.navbar-container {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+
+  font-family: "Josefin Slab", serif;
+ 
+  font-weight: 500;
+  font-style: normal;
+  font-size: 26px;
+
+  color: white;
+  text-align: right;
+}
