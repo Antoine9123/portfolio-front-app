@@ -31,7 +31,7 @@ export class ContactComponent {contactForm: FormGroup;
           this.contactForm.reset();
         },
         error: (error) => {
-          alert('Error sending email: ' + error.message);
+          alert(`Oops! There was a problem sending the email. You can send me an email to this address: aa.leytens@gmail.com`);
         }
       });
     }
