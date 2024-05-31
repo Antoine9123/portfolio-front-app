@@ -5,6 +5,9 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
+require('dotenv').config();
+
+
 app.use(bodyParser.json()); 
 app.use(express.static(__dirname + '/dist/portfolio/browser'));
 
@@ -39,7 +42,7 @@ app.post('/send-email', async (req, res) => {
       console.log(process.env.EMAIL)
       await transporter.sendMail(mailOptions);
       console.log('Email sent successfully');
-      res.status(200).send('Email sent successfully');
+      res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
       console.error('Error sending email:', error.message);
       res.status(500).send('Error sending email: ' + error.message);
