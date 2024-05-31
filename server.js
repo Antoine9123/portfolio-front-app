@@ -18,12 +18,14 @@ app.post('/send-email', async (req, res) => {
     console.log('Message:', message);
   
     const transporter = nodemailer.createTransport({
-      service: 'Gmail', 
-      auth: {
-        user: process.env.EMAIL, 
-        pass: process.env.EMAIL_PASSWORD 
-      }
-    });
+        host: 'mail.gandi.net',
+        port: 587, // Port 25, 465 pour SSL, ou 587 pour STARTTLS
+        secure: false, // true pour SSL/TLS
+        auth: {
+          user: 'contact@antoine-leytens.dev', // Nom d'utilisateur Gandi
+          pass: process.env.EMAIL_PASSWORD // Mot de passe Gandi
+        }
+      });
   
     const mailOptions = {
       from: email,
