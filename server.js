@@ -28,7 +28,7 @@ app.post('/send-email', async (req, res) => {
       });
   
     const mailOptions = {
-      from: email,
+      from: 'contact@antoine-leytens.dev',
       to: process.env.EMAIL, 
       subject: `Contact form submission from ${name}`,
       text: message
