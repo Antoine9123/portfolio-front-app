@@ -19,8 +19,8 @@ app.post('/send-email', async (req, res) => {
   
     const transporter = nodemailer.createTransport({
         host: 'mail.gandi.net',
-        port: 587, // Port 25, 465 pour SSL, ou 587 pour STARTTLS
-        secure: false, // true pour SSL/TLS
+        port: 587, 
+        secure: false, 
         auth: {
           user: 'contact@antoine-leytens.dev', // Nom d'utilisateur Gandi
           pass: process.env.EMAIL_PASSWORD // Mot de passe Gandi
@@ -36,6 +36,7 @@ app.post('/send-email', async (req, res) => {
   
     try {
       console.log('Sending email...');
+      console.log(process.env.EMAIL)
       await transporter.sendMail(mailOptions);
       console.log('Email sent successfully');
       res.status(200).send('Email sent successfully');
