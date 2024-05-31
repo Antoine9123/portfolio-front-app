@@ -12,6 +12,10 @@ app.use(express.static(__dirname + '/dist/portfolio/browser'));
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
+  console.log('Received request to send email:');
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Message:', message);
   
   const transporter = nodemailer.createTransport({
     service: 'Gmail', 
