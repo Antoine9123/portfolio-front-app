@@ -34,12 +34,13 @@ app.post('/send-email', async (req, res) => {
       from: 'contact@antoine-leytens.dev',
       to: process.env.EMAIL, 
       subject: `Contact form submission from ${name}`,
-      text: message
+      text: `from : ${email}
+      name : ${name} 
+      message : ${message}`
     };
   
     try {
       console.log('Sending email...');
-      console.log(process.env.EMAIL)
       await transporter.sendMail(mailOptions);
       console.log('Email sent successfully');
       res.status(200).json({ message: 'Email sent successfully' });
