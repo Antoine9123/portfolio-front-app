@@ -5,7 +5,10 @@
     <title>Portfolio</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://portfolio-front-app-9e6034f671ad.herokuapp.com/favicon.ico;">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,9 +25,6 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    
     <app-root></app-root>
   </body>
-
-
 </html>
