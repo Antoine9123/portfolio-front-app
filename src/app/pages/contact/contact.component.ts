@@ -25,15 +25,15 @@ export class ContactComponent {contactForm: FormGroup;
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      this.emailService.sendEmail(this.contactForm.value).subscribe(
-        response => {
+      this.emailService.sendEmail(this.contactForm.value).subscribe({
+        next: (response) => {
           alert('Email sent successfully');
           this.contactForm.reset();
         },
-        error => {
+        error: (error) => {
           alert('Error sending email: ' + error.message);
         }
-      );
+      });
     }
   }  
 }
