@@ -25,19 +25,24 @@ app.post('/send-email', async (req, res) => {
         port: 587, 
         secure: false, 
         auth: {
-          user: 'contact@antoine-leytens.dev', // Nom d'utilisateur Gandi
-          pass: process.env.EMAIL_PASSWORD // Mot de passe Gandi
+          user: 'contact@antoine-leytens.dev', 
+          pass: process.env.EMAIL_PASSWORD 
         }
       });
   
-    const mailOptions = {
-      from: 'contact@antoine-leytens.dev',
-      to: process.env.EMAIL, 
-      subject: `Contact form submission from ${name}`,
-      text: `from : ${email}
-      name : ${name} 
-      message : ${message}`
-    };
+      const mailOptions = {
+        from: 'contact@antoine-leytens.dev',
+        to: process.env.EMAIL, 
+        subject: `Message received from ${name}`,
+        text: String.raw`
+          Message received from ${name} (${email}):
+      
+          Name: ${name}
+          Email: ${email}
+          Message:
+          ${message}
+        `
+      };
   
     try {
       console.log('Sending email...');

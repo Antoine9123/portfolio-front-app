@@ -69,4 +69,10 @@ form {
 
 }
 
+input:valid,
+textarea:valid {
+  border: 1px solid #CC7676 !important;
+}
+
+
 
